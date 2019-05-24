@@ -4,6 +4,7 @@ import re
 class Filter(object):
 
     def __init__(self):
+        self.id = ''
         self.number_of_checks = 0
         self.number_of_matches = 0
 

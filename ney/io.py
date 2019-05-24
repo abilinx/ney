@@ -6,16 +6,14 @@ class FileInputStream(object):
     def __init__(self, file_path):
         self.file = open(file_path, 'r')
 
-    @property
-    def next(self):
+    def get_next(self):
         return LogLine(self.file.readline())
 
 
 class TerminalInputStream(object):
 
-    @property
-    def next(self):
-        return input()
+    def get_next(self):
+        return LogLine(input())
 
 
 class FileOutputStream(object):
